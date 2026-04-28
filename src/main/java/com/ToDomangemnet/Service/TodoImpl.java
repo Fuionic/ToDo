@@ -4,6 +4,7 @@ import com.ToDomangemnet.Entity.TODO;
 import com.ToDomangemnet.Repository.ToDoRepository;
 import com.ToDomangemnet.TodoDTO.ToDoDTO;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,7 +13,9 @@ import java.util.stream.Collectors;
 @Service
 public class TodoImpl implements TODOService{
 
+    @Autowired
     private ToDoRepository toDoRepository;
+    @Autowired
     private ModelMapper modelMapper;
 
 
